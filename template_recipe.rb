@@ -57,8 +57,12 @@ end
 INIT
 
 run "bundle install"
-gemset_create(app_name)
+
+env = RVM::Environment.new
+env.gemset_create(app_name)
+env.gemset_use(app_name)
 create_file ".rvmrc", "rvm gemset use #{app_name}"
+
 run "rm public/index.html"
 generate :controller, "Home index"
 generate :model, "Home"
@@ -79,8 +83,3 @@ git :branch => "development"
 
 
 
-def gemset_create(app_name)
-	env = RVM::Environment.new
-	env.gemset_create(app_name)
-	env.gemset_use(app_name)
-end
