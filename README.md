@@ -1,15 +1,10 @@
 # Rails App Setup
-### This template recipe generate a basic pre configured rails app
+This template recipe generate a basic pre configured rails app
 
 
 ### Usage
 
-```rails
-
-rails new your_app_name -m template_recipe.rb --skip-bundle
-
-```
-
+		rails new your_app_name -m template_recipe.rb --skip-bundle
 
 ### Contributing to money-converter
  
