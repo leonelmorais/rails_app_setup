@@ -80,7 +80,7 @@ git :branch => "development"
 
 
 def gemset_create(app_name)
-	env = RVM:Environment.new
+	env = RVM::Environment.new
 	env.gemset_create(app_name)
 	env.gemset_use(app_name)
 end
