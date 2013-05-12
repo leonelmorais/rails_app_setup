@@ -69,16 +69,6 @@ capify!
 rake "db:migrate"
 route 'root :to => "home#index"'
 
-initializer "enumerable_ar.rb", <<-INIT
-	module ActiveRecord
-		def Base.each(&block)
-			all.each &block
-		end
-
-	Base.extend Enumerable
-	end
-INIT
-
 git :init
 git :add => "."
 git :commit => "-am 'Application Setup'"
