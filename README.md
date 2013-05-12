@@ -5,7 +5,7 @@ This template recipe generate a basic pre configured rails app
 
 ### Usage
 
-	rails new your_app_name -Tm https://raw.github.com/leonelmorais/rails_app_setup/master/template_recipe.rb --skip-bundle
+	bash <(curl -s https://raw.github.com/leonelmorais/rails_app_setup/master/rails_app_setup.sh) your_app_name
 
 
 
